@@ -26,7 +26,8 @@ header h1 {
   display: inline-block;
   border-top-right-radius: 35px;
   border-width: 60px;
-  background: grey;
+  background: rgb(234, 214, 214);
+  opacity: 0.7;
   font-size: 30px;
   padding-right: 80px;
   padding-left: 5px;
@@ -66,7 +67,7 @@ header nav ul li a:hover {
 }
 
 header nav ul li a:active {
-  color: rgb(80, 112, 126);
+  color: rgb(43, 5, 13);
 
 }
 
@@ -81,17 +82,49 @@ header nav ul li a:active {
 
 }
 
+.page-wrapeper {
+  margin: 0px 5%;
+  display: grid;
+  min-height: 500px;
+  height: 70vh;
+  grid-template-rows: 25% 25% 25% ;
+  grid-template-columns: 75%;
+  grid-template-areas:
+  "about"
+  "work"
+  "contact";
+}
+
 .page-section {
+  display: flex;
+  padding-bottom: 50px;
   color: blue;
+}
+
+
+
+.title{
+  display: inline-block;
+  border-right: 0.5px grey solid;
+  color: #ffffff;
+  width:200px;
+  /* margin-left: 100px; */
+  padding-right: 20px;
+  
+  
 }
 
 .grid-section {
   display: grid;
-  margin: 0px 10%;
-  width: 80%;
-  background-color: aquamarine;
+  margin: 0px 15%;
+  width: 70%;
+  position: relative;
+  margin-right: 100px;
+  background-repeat: no-repeat;
+  align-content: end;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 30px;
   grid-template-areas:
     "item1 item1"
     "item2 item3"
@@ -99,15 +132,34 @@ header nav ul li a:active {
   ;
 }
 
+
 .item1 {
   grid-area: item1;
-  height: 400px;
-  background-image: url("../images/digital-marketing-meeting.jpg");
-  background-repeat: no-repeat;
+  /* background-image: url("../images/digital-marketing-meeting.jpg");  
+  background-size: cover;  */
+  
+
+}
+
+.img1 {
+  
+  height:300px;
+  width:100%;
+  object-fit: cover;
+  opacity: 0.5;
+  transition: 2s;
+}
+
+.img1:hover{
+  cursor:pointer;
+  opacity:1;
+
 }
 
 .item2 {
   grid-area: item2;
+  height: 300px;
+  background-image: url("../images/02-portfolio-1.jpg");
 
 }
 
@@ -123,7 +175,22 @@ header nav ul li a:active {
   grid-area: item5;
 }
 
+.heading{
+  position:absolute;
+  width:100%;
+  background-color: rgba(0,0,0,0.7);
+  height: 60px;
+  margin-top: -60px;
+  color: white;
+  font-size: 18px;
+  border-bottom: 6px gray solid;
+  
+}
 
+#subheading{
+  font-size: 12px;
+  line-height: 5px;
+}
 
 h1,
 h2,
