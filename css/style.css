@@ -2,7 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  
+
 }
 
 body {
@@ -11,11 +11,12 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
   background-color: #080808;
-  
+
 }
 
-header {
-  padding: 15px;
+.header-section {
+  padding-top: 25px;
+  padding-bottom: 25px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: #080808;
   color: #ffffff;
@@ -23,12 +24,19 @@ header {
 
 header h1 {
   display: inline-block;
+  border-top-right-radius: 35px;
+  border-width: 60px;
+  background: grey;
   font-size: 30px;
-  padding-top: 20px;
-  color: gray;
+  padding-right: 80px;
+  padding-left: 5px;
+  text-align: left;
+  color: #080808;
+  
 }
+
 header nav {
-  padding-top: 5px;
+  padding-top: 15px;
   margin-right: 20px;
   float: right;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -44,20 +52,25 @@ header nav ul {
 header nav ul li {
   display: inline-block;
   margin-left: 25px;
-  padding-top: 30px;
+
 }
 
 header nav ul li a {
   color: gray;
-  
+
 }
 
 header nav ul li a:hover {
   color: rgb(230, 221, 221);
-  
+
 }
 
-.hero-banner{
+header nav ul li a:active {
+  color: rgb(80, 112, 126);
+
+}
+
+.hero-banner {
   margin: 0px 5%;
   height: 200px;
   width: 90%;
@@ -66,6 +79,48 @@ header nav ul li a:hover {
   background-size: cover;
   background-position: center;
 
+}
+
+.page-section {
+  color: blue;
+}
+
+.grid-section {
+  display: grid;
+  margin: 0px 10%;
+  width: 80%;
+  background-color: aquamarine;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "item1 item1"
+    "item2 item3"
+    "item4 item5"
+  ;
+}
+
+.item1 {
+  grid-area: item1;
+  height: 400px;
+  background-image: url("../images/digital-marketing-meeting.jpg");
+  background-repeat: no-repeat;
+}
+
+.item2 {
+  grid-area: item2;
+
+}
+
+.item3 {
+  grid-area: item3;
+}
+
+.item4 {
+  grid-area: item4;
+}
+
+.item5 {
+  grid-area: item5;
 }
 
 
@@ -77,6 +132,7 @@ h4,
 h5,
 h6 {
   margin: 0;
+  color: blue;
 }
 
 p {
