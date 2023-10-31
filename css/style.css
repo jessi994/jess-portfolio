@@ -22,7 +22,7 @@ body {
   color: #ffffff;
 }
 
-.img9{
+.img9 {
   height: 40px;
   width: 40px;
   object-fit: cover;
@@ -39,7 +39,7 @@ header h1 {
   display: inline-block;
   border-top-right-radius: 35px;
   border-width: 60px;
-  background: rgb(234, 214, 214);
+  background: whitesmoke;
   opacity: 0.7;
   font-size: 30px;
   padding-right: 40px;
@@ -49,6 +49,8 @@ header h1 {
   color: #080808;
 
 }
+
+
 
 header nav {
   padding-top: 15px;
@@ -97,11 +99,21 @@ header nav ul li a:active {
 
 }
 
-.hero-banner div h2 {
- color:wheat;
- padding-top: 60px;
- padding-left: 600px;
+.text-overlay{
+  position:absolute;
+  transform: translate(-50%, -50%);
+  /* top:50%;
+  /* left: 50%; */
+  padding-top: 180px;
+  padding-left: 500px; 
+  color: wheat;
 }
+
+/* .hero-banner div h2 {
+  color: wheat;
+  padding-top: 60px;
+  padding-left: 600px;
+} */
 
 .about .work {
   display: flex;
@@ -133,7 +145,7 @@ header nav ul li a:active {
 
 
 .title {
-  display: inline-block;
+  display: flex;
   white-space: nowrap;
   border-right: 0.5px grey solid;
   color: #ffffff;
@@ -178,8 +190,8 @@ header nav ul li a:active {
   margin-right: 100px;
   background-repeat: no-repeat;
   align-content: end;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 0.5fr 0.5fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
   grid-gap: 35px;
   grid-template-areas:
     "item1 item1"
@@ -191,10 +203,6 @@ header nav ul li a:active {
 
 .item1 {
   grid-area: item1;
-  /* background-image: url("../images/digital-marketing-meeting.jpg");  
-  background-size: cover;  */
-
-
 }
 
 .img1 {
@@ -302,8 +310,85 @@ h5,
 h6 {
   margin: 0;
   color: blue;
+
 }
 
 p {
   margin: 0;
 }
+
+@media only screen and (max-width: 768px) {
+  .grid-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-section h1 {
+    display: flex;
+    width: 180px;
+    font-size: 1rem;
+    padding: 20px;
+  }
+
+  .header-section, .hero-banner{
+    display: flex;
+    justify-content: space-between;
+   
+  }
+
+  .hero-banner div h2{
+    display: flex;
+  }
+
+  .page-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title,
+  .title2,
+  .title3 {
+    flex-direction: column;
+    width: 150px;
+    margin-bottom: 20px;
+  }
+
+  .contacts-l {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .words {
+    font-size: 15px;
+  }
+
+  header nav ul li {
+    display: flex;
+    /* flex-direction: column;
+    padding-bottom: 200px; */
+    font-size: 18px;
+    
+  }
+
+    .text-overlay{
+      padding-left:350px;
+    }
+
+    .headings{
+      font-size: 16px;
+      height: 90px;
+      margin-top: -100px;
+      width: 70%;
+    }
+
+}
+
+  @media only screen and (max-width: 300px) {
+    .text-overlay{
+      padding-left:200px;
+    }
+    .headings{
+      font-size: 12px;
+      width: 100%;
+    }
+  }
